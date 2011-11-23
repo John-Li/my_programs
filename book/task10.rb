@@ -17,7 +17,11 @@ def radius(side_a, side_b, side_c, halfperimetr)
   Math.sqrt((p-a)*(p-b)*(p-c)/p)
 end
 
-puts "Unknown katet is #{katet_unkn(c, a)}"
-puts "Radius of the inscribed circle is #{radius(a, katet_unkn(c, a), c, halfperimetr(a, katet_unkn(c, a), c))}"
+katet = katet_unkn(c, a)
+
+puts "Unknown katet is #{katet}"
+puts "Radius of the inscribed circle is #{radius(a, katet, c, halfperimetr(a, katet, c))}"
+
+
 
 
