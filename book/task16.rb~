@@ -1,8 +1,0 @@
-a = [1, 1]
-b = [3, 3]
-
-def distance(coordinates_a, coordinates_b)
-  Math.sqrt((coordinates_b[0] - _coordinates_a[0])**2 + (coordinates_b[1] - coordinates_a[1])**2)
-end
-
-puts "Distance between 'a' and 'b' is #{distance(a, b)}" 
