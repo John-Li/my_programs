@@ -19,8 +19,7 @@ d = gets.to_i
 if a < b and b < c and c < d
   puts "Here you go #{a}, #{b}, #{c}, #{d}"
 elsif a <= b and b <= c and c <= d
-  arr << a << b << c << d
-  puts "Here you go #{(arr.last)*4}"
+  puts "Here you go #{d.to_s)4}"
 else 
   puts "Here you go #{a*2}, #{b*2}, #{c*2}, #{d*2}"
 end
