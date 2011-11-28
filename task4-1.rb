@@ -9,8 +9,9 @@ a.push(gets.to_i)
 puts "Please enter the second number"
 a.push(gets.to_i)
 
-if a[1] > a[0] 
-  puts "Here you go: #{a[0]}, #{a[1]}"
+if a[0] > a[1]
+  number = a.pop
+  puts "Here you go: #{a.unshift(number).join(", ")}"
 else 
-  puts "Here you go: #{a[1]}, #{a[0]}"
+  puts "Here you go: #{a.join(", ")}"
 end
