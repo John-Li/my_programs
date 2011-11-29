@@ -4,14 +4,16 @@
 puts "Please enter a number of a month to find out to which season it refers to"
 number = gets.to_i
 
-if number == 12 and number <= 2
-  puts "Its winter"
+result = if number == 12 and number <= 2
+  "Its winter"
 elsif number >= 3 and number <= 5
-  puts "Its spring"
+  "Its spring"
 elsif number >= 6 and number <= 8
-  puts "Its summer" 
+  "Its summer" 
 elsif number >= 9 and number <= 11
-  puts "Its autumn"
+  "Its autumn"
 else 
-  puts "You've entered something wrong"
+  "You should enter a number between 1 and 12"
 end
+
+puts result
