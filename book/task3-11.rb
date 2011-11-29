@@ -4,23 +4,26 @@
 # числа оставить без изменения; в противном случае все числа
 # заменяются их квадратами.
 
-arr = []
+a = []
 
-puts "Please enter four numbers"
-puts "Number 1 is:"
-a = gets.to_i
+puts "Please enter four numbers. \nNumber 1 is:"
+a.push(gets.to_i)
 puts "Number 2 is:"
-b = gets.to_i
+a.push(gets.to_i)
 puts "Number 3 is:"
-c = gets.to_i
+a.push(gets.to_i)
 puts "Number 4 is:"
-d = gets.to_i
+a.push(gets.to_i)
 
-if a < b and b < c and c < d
-  puts "Here you go #{a}, #{b}, #{c}, #{d}"
-elsif a <= b and b <= c and c <= d
-  puts "Here you go #{(d.to_s) *4}"
-else 
-  puts "Here you go #{a*2}, #{b*2}, #{c*2}, #{d*2}"
+result = if a[0] < a[1] and a[1] < a[2] and a[2] < a[3]
+  "Here you go #{a.join(', ')}"
+elsif a[0] <= a[1] and a[1] <= a[2] and a[2] <= a[3]
+  "Here you go #{(Array.new(4,a.max)).join(', ')}"
+else
+  c = []
+  a.each {|i| c << i*2} 
+  "Here you go #{c.join(', ')}"
 end
+
+puts result
 
