@@ -6,12 +6,14 @@
 puts "Please enter a two character number to find out if it consists of the same numbers"
 number = gets.chomp
 
-if number.length >= 3 
-  puts "Your number consists of more than 2 characters"
-elsif number == number.to_f || number == ""
-  puts "You entered a floating number or an empty string"
+result = if number.length >= 3 
+  "Your number consists of more than 2 characters"
+elsif number == number.to_f or number == ""
+  "You entered a floating number or an empty string"
 elsif number[0] == number[1]
-  puts "Your number consists of the same numbers"
+  "Your number consists of the same numbers"
 else 
-  puts "Your number consists of differend numbers"
+  "Your number consists of differend numbers"
 end
+
+puts result
