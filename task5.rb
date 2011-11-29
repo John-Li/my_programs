@@ -5,8 +5,10 @@
 puts "Plese entrer a string using only 0 and 1 characters"
 str = gets.chomp
 
-if str.include? "0" or str.include? "1"
-  puts "You've done a great job! This is a nice string"
+result = if str.include? "0" or str.include? "1"
+  "You've done a great job! This is a nice string"
 else
-  puts "You've entered a string using restricted character, please use only '0' and '1'"
-end 
+  "You've entered a string using restricted character, please use only '0' and '1'"
+end  
+
+puts result
