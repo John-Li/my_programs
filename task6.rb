@@ -4,7 +4,7 @@
 puts "Please enter a number of a month to find out to which season it refers to"
 number = gets.to_i
 
-result = if number == 12 and number <= 2
+result = if number <= 2 and number == 12 
   "Its winter"
 elsif number >= 3 and number <= 5
   "Its spring"
