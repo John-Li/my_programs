@@ -4,15 +4,12 @@
 puts "Please enter a number of a month to find out to which season it refers to"
 number = gets.to_i
 
-case number
-when 12, 1..2
-  puts "Its winter"
-when 3..5
-  puts "Its spring"
-when 6..8
-  puts "Its summer"
-when 9..11
-  puts "Its autumn"
-else
-  puts "You've entered something wrong"
+season = case number
+  when 12, 1..2 then "winter"
+  when 3..5     then "spring"
+  when 6..8     then "summer"
+  when 9..11    then "autumn"
+  else "You've entered something wrong"
 end
+
+puts "This is #{season}"
