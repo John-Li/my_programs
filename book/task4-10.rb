@@ -7,22 +7,13 @@
 # операнды – числа, над которыми выполняются действия.
 # Например, при вводе 3, 4, 5 результат – 20.
 
-puts "Hi there, its a simple calc."
-puts "Please enter an operation: \n1 - to substract \n2 - to add \n3 - to divide \n4 - to multiply"
-oper = gets.chomp
-puts "Please enter 1-st operand"
-oper1 = gets.to_i
-puts "Please enter 2-nd operand"
-oper2 = gets.to_i
-
-case oper
-when '1'
-  puts "The result is:  #{oper1 - oper2}"
-when '2'
-  puts "The result is:  #{oper1 + oper2}"
-when '3'
-  puts "The result is:  #{oper1 / oper2}"
-when '4'
-  puts "The result is:  #{oper1 * oper2}"
+def calc(operation, operand1, operand2)
+ 
+ case operation
+  when 1 then operand1 - operand2
+  when 2 then operand1 + operand2
+  when 3 then operand1 / operand2
+  when 4 then operand1 * operand2
+  else "Smth wrong"
+  end
 end
-
