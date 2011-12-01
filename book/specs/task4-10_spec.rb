@@ -10,7 +10,7 @@ describe "task 4-10" do
   end
 
   it "should return quotient of operand 1 divided on operand 2" do
-    calc(3, 6, 7.0).should == 0.857142857142857
+    calc(3, 6, 7.0).should be_close(0.857, 0.0001)
   end
 
   it "should return message" do
