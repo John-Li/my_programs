@@ -1,3 +1,4 @@
 def method_2(array)
-  "#{array.min}, #{array.index(array.min)}"
+  min = array.min  
+  res = [min, array.index(min)]
 end
