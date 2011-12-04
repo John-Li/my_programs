@@ -7,6 +7,6 @@ def method_5(array)
   neg_index = array.index(neg)
   range = array[0...neg_index]
   sum = 1
-  range.each {|i| i*sum}
+  range.each {|i| sum*=i}
   sum
 end
