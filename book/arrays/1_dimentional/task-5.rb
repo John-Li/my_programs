@@ -3,10 +3,7 @@
 # Вычислить произведение элементов массива до первого отрицательного.
 
 def method_5(array)
-  neg = array.find {|i| i < 0}
-  neg_index = array.index(neg)
+  neg_index = array.index {|i| i < 0}
   range = array[0...neg_index]
-  sum = 1
-  range.each {|i| sum*=i}
-  sum
+  range.reduce(:*)
 end
