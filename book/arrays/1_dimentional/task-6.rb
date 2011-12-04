@@ -3,10 +3,7 @@
 # сумму элементов массива до первого нуля.
 
 def method_6(array)
-  zero = array.find {|i| i == 0}
-  zero_index = array.index(zero)
+  zero_index = array.index {|i| i == 0}
   range = array[0...zero_index]
-  sum = 0
-  range.each {|i| sum+=i}
-  sum
+  range.reduce(:+)
 end
