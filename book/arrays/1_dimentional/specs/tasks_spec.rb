@@ -21,4 +21,7 @@ describe "1-dimentional array specs" do
   it "should move minimal element to the end of array" do
     method_19(array).should == [12, 23, -3, 34, 0, 26, 64, 35, -3, -65]
   end
+
+  it "should form an array of 9 items, which elements equal sqrt(index of element)" do
+    method_20.should == [] # How is it possible to check without calculator?
 end
