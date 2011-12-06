@@ -5,7 +5,13 @@
 # Результат: полученный массив X =[1,3,4,7,9,10,0,0,0,0].
 
 def method_17(array)
-  zero_array = []    
-  array.each_with_index {|number, index|zero_array << array.slice!(index) if number.zero?}
+  zero_array = []  
+  while array.include?(0) do
+    array.each_with_index do |number, index|
+    zero_array << array.slice!(index) if number == 0
+    end
+  end
   array.concat(zero_array)
 end
+
+
