@@ -11,7 +11,9 @@ describe "2-dimensional arrays tasks" do
                       [3,9,3,1,9,5],
                       [6,3,9,2,1,7] ] }
 
-  let (:array_1d) { [5,2,7,3,1,8] }          
+  let (:array_1d) { [5,2,7,3,1,8] }  
+
+  let (:auxiliary) {[]}        
 
   it "should change odd lines in 2-d array with 1-d array" do 
     method_1(array_2d, array_1d).should == [ [1,2,3,4,5,6],
