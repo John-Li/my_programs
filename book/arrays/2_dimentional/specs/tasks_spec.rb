@@ -1,5 +1,6 @@
 require '../task-1.rb'
 require '../task-2.rb'
+require '../task-3.rb'
 
 describe "2-dimensional arrays tasks" do
   let (:array_2d) { [ [1,2,3,4,5,6],
@@ -26,6 +27,15 @@ describe "2-dimensional arrays tasks" do
                                              [5,2,7,3,1,8],
                                              [7,9,3,6,0,2],
                                              [5,2,7,3,1,8],
+                                             [6,3,9,2,1,7] ]
+  end
+  
+  it "should change first 3 lines of 2-d array with 1-d array" do
+    method_3(array_2d, array_1d).should == [ [5,2,7,3,1,8],
+                                             [5,2,7,3,1,8],
+                                             [5,2,7,3,1,8],
+                                             [7,9,3,6,0,2],
+                                             [3,9,3,1,9,5],
                                              [6,3,9,2,1,7] ]
   end
 end
