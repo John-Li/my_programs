@@ -5,8 +5,7 @@
 def method_2(upto)
   result = 1 
   for i in 1..upto do
-    calculation = result * i
-    result = calculation
+    result = result * i
   end
   result
 end  
