@@ -1,6 +1,7 @@
 require '../task-1.rb'
 require '../task-2.rb'
 require '../task-3.rb'
+require '../task-4.rb'
 
 describe "2-dimensional arrays tasks" do
   let (:array_2d) { [ [1,2,3,4,5,6],
@@ -38,4 +39,13 @@ describe "2-dimensional arrays tasks" do
                                              [3,9,3,1,9,5],
                                              [6,3,9,2,1,7] ]
   end
+
+  it "should replace even and odd lines in 2-d array" do
+    method_4(array_2d).should == [ [2,3,5,3,1,4],
+                                   [1,2,3,4,5,6],
+                                   [7,9,3,6,0,2],
+                                   [2,5,1,6,8,9],
+                                   [6,3,9,2,1,7],
+                                   [3,9,3,1,9,5] ]
+  end                                    
 end
