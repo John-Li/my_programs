@@ -7,6 +7,7 @@ require '../task-8.rb'
 require '../task-9.rb'
 require '../task-10.rb'
 require '../task-11.rb'
+require '../task-12.rb'
 
 describe "cycles with precondition" do
 
@@ -40,11 +41,15 @@ describe "cycles with precondition" do
   method_9(sequence).should == 11
   end
 
-  it "should sum all negative numbers in sequence given utill first zero" do
+  it "should sum all negative numbers in sequence given util first zero" do
     method_10(sequence).should == -6
   end
   
-  it "should find product of numbers in sequence given untill first negative number" do
+  it "should find product of numbers in sequence given until first negative number" do
     method_11(sequence).should == 6 
+  end
+
+  it "should find power of number sequence given until first zero" do
+    method_12(sequence).should == 240
   end
 end
