@@ -8,6 +8,8 @@ require '../task-9.rb'
 require '../task-10.rb'
 require '../task-11.rb'
 require '../task-12.rb'
+require '../task-13.rb'
+require '../task-14.rb'
 
 describe "cycles with precondition" do
 
@@ -51,5 +53,13 @@ describe "cycles with precondition" do
 
   it "should find power of number sequence given until first zero" do
     method_12(sequence).should == 240
+  end
+  
+  it "should find power of all positive numbers in sequence given until first zero" do
+    method_13(sequence).should == 30
+  end  
+  
+  it "should gind power of all negative numbers in sequence given until first zero" do
+    method_14(sequence).should == 8
   end
 end
