@@ -10,6 +10,8 @@ require '../task-11.rb'
 require '../task-12.rb'
 require '../task-13.rb'
 require '../task-14.rb'
+require '../task-15.rb'
+
 
 describe "cycles with precondition" do
 
@@ -61,5 +63,11 @@ describe "cycles with precondition" do
   
   it "should gind power of all negative numbers in sequence given until first zero" do
     method_14(sequence).should == 8
+  end
+  
+    let (:sequence2) {[1,10,-4,5,-16,-5,0]}
+
+  it "should find all numbers in sequence given in range -5..5" do
+    method_15(sequence2).should == [1,-4,5,-5]
   end
 end
