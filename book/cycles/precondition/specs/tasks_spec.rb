@@ -3,8 +3,11 @@ require '../task-2.rb'
 require '../task-3.rb'
 require '../task-4.rb'
 require '../task-6.rb'
+require '../task-8.rb'
 
 describe "cycles with precondition" do
+
+  let (:sequence) {[1,2,3,-4,5,-2,0,1,2,3]}
 
   it "should raise number into degree" do
     method_1(2,3).should == 8
@@ -24,5 +27,9 @@ describe "cycles with precondition" do
 
   it "should find sum of even squared and odd cubed in 1..N range" do
     method_6(4).should == 48
+  end
+
+  it "should find sum of number sequence entered untill first zero entered" do 
+    method_8(sequence).should == 5
   end
 end
