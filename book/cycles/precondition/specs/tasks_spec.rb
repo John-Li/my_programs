@@ -11,7 +11,7 @@ require '../task-12.rb'
 require '../task-13.rb'
 require '../task-14.rb'
 require '../task-15.rb'
-
+require '../task-16.rb'
 
 describe "cycles with precondition" do
 
@@ -65,9 +65,14 @@ describe "cycles with precondition" do
     method_14(sequence).should == 8
   end
   
-    let (:sequence2) {[1,10,-4,5,-16,-5,0]}
-
+  let (:sequence2) {[1,10,-4,5,-16,-5,0]}
+  let (:sequence3) {[1,3,16,7,13,10,2,-1]}
+ 
   it "should find all numbers in sequence given in range -5..5" do
     method_15(sequence2).should == [1,-4,5,-5]
   end
+  
+  it "should find all numbers until first negative number in sequense given in 3..13 range " do
+    method_16(sequence3).should == [3,7,13,10]
+  end  
 end
