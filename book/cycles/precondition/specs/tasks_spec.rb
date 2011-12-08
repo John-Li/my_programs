@@ -4,6 +4,7 @@ require '../task-3.rb'
 require '../task-4.rb'
 require '../task-6.rb'
 require '../task-8.rb'
+require '../task-9.rb'
 
 describe "cycles with precondition" do
 
@@ -29,7 +30,12 @@ describe "cycles with precondition" do
     method_6(4).should == 48
   end
 
-  it "should find sum of number sequence entered untill first zero entered" do 
+  it "should find sum of numbers in sequence given untill first zero" do 
     method_8(sequence).should == 5
   end
+
+  it "should sum all positive numbers in sequence given until first zero" do
+  method_9(sequence).should == 11
+  end
+
 end
