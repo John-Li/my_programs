@@ -1,6 +1,7 @@
 require '../task-1.rb'
 require '../task-2.rb'
 require '../task-3.rb'
+require '../task-4.rb'
 
 describe "cycles with precondition" do
 
@@ -14,6 +15,10 @@ describe "cycles with precondition" do
   
   it "should find fibonacci number for 'N'" do
     method_3(4).should == 5
+  end
+
+  it "should find sum of number squared" do
+    method_4(4).should == 30
   end
 
 end
