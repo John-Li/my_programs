@@ -5,6 +5,7 @@ require '../task-13.rb'
 require '../task-11.rb'
 require '../task-16.rb'
 require '../task-18.rb'
+require '../task-21.rb'
 
 describe "tasks_spec.rb" do
   let (:sequence) {[1,2,3,-4,5,-2,0,-8,6,9]}
@@ -37,5 +38,10 @@ describe "tasks_spec.rb" do
   
   it "should find how many negative numbers in the begining of sequence given" do
     method_18(sequence1).should == 2
+  end
+  
+  it "should return all letters form 'A' to 'Z'" do
+    expected = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
+    method_21.should == expected 
   end
 end
