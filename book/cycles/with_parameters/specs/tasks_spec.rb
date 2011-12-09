@@ -1,3 +1,4 @@
+require '../task-5.rb'
 require '../task-6.rb'
 require '../task-10.rb'
 require '../task-12.rb'
@@ -14,6 +15,10 @@ describe "tasks_spec.rb" do
   let (:sequence) {[1,2,3,-4,5,-2,0,-8,6,9]}
   let (:sequence1) {[-4,-2,1,3,5,0,-6,-9,8,7]}
   let (:range) {(1.0 .. 10.0)}
+
+  it "should return all divisors of number given in decreasing order" do
+    method_5(48).should == [48, 24, 16, 12, 8, 6, 4, 3, 2, 1]
+  end
 
   it "should find sum of all positive numbers and quantity of negative numbers in sequence given" do
     method_6(sequence).should == [26, 3]
