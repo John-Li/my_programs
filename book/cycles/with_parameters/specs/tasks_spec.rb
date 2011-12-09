@@ -1,5 +1,6 @@
 require '../task-6.rb'
 require '../task-10.rb'
+require '../task-12.rb'
 
 describe "tasks_spec.rb" do
   let (:sequence) {[1,2,3,-4,5,-2,0,-8,6,9]}
@@ -11,5 +12,9 @@ describe "tasks_spec.rb" do
   
   it "should sum all integers all even and all odd numbers in interval given" do
     method_10(range).should == [55, 30, 25]
+  end
+
+  it "should find arithmetic mean of sequence given" do
+    method_12(sequence).should == 1.2
   end
 end
