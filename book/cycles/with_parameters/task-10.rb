@@ -1,11 +1,17 @@
 # Задача 10.
-# В массиве из 10 чисел есть положительные и отрицательные
-# элементы. Подсчитать количество положительных элементов массива.
+# Написать программу, в которой определяется сумма S всех целых
+# чисел в интервале, заданном переменными N и M, а также сумма SA
+# четных и SB нечетных чисел в том же интервале.
 
-def method_10(array)
-  quantity = 0
-  for i in array[0..-1]
-    quantity += 1 if i > 0
+def method_10(range)
+  sum_even = 0
+  sum_odd  = 0
+  for i in range
+    if i.even?
+      sum_even += i
+    elsif i.odd?
+      sum_odd += i 
+    end
   end
-  quantity
+  [sum_even + sum_odd, sum_even, sum_odd]
 end
