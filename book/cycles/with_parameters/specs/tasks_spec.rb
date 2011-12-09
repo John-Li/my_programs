@@ -6,6 +6,7 @@ require '../task-11.rb'
 require '../task-16.rb'
 require '../task-18.rb'
 require '../task-21.rb'
+require '../task-22.rb'
 
 describe "tasks_spec.rb" do
   let (:sequence) {[1,2,3,-4,5,-2,0,-8,6,9]}
@@ -43,5 +44,10 @@ describe "tasks_spec.rb" do
   it "should return all letters form 'A' to 'Z'" do
     expected = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
     method_21.should == expected 
+  end
+  
+  it "should return all letters from 'Z' to 'A'" do
+    expected = "ZYXWVUTSRQPONMLKJIHGFEDCBA"
+    method_22.should == expected
   end
 end
