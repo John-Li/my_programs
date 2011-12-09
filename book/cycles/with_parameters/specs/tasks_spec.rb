@@ -3,6 +3,7 @@ require '../task-10.rb'
 require '../task-12.rb'
 require '../task-13.rb'
 require '../task-11.rb'
+require '../task-16.rb'
 
 describe "tasks_spec.rb" do
   let (:sequence) {[1,2,3,-4,5,-2,0,-8,6,9]}
@@ -26,5 +27,9 @@ describe "tasks_spec.rb" do
   
   it "should sum numbers from 1 to N powered M" do
     method_11(4, 3).should == 100
+  end
+
+  it "should find 20-th fibonacci number" do
+    method_16(20).should == 6765
   end
 end
