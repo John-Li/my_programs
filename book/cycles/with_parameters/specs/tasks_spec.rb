@@ -1,6 +1,7 @@
 require '../task-6.rb'
 require '../task-10.rb'
 require '../task-12.rb'
+require '../task-13.rb'
 
 describe "tasks_spec.rb" do
   let (:sequence) {[1,2,3,-4,5,-2,0,-8,6,9]}
@@ -16,5 +17,9 @@ describe "tasks_spec.rb" do
 
   it "should find arithmetic mean of sequence given" do
     method_12(sequence).should == 1.2
+  end
+  
+  it "should find difference of maximum and minimum numbers" do
+    method_13(sequence).should == 17
   end
 end
