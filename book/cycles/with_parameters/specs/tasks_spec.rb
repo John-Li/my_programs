@@ -4,9 +4,11 @@ require '../task-12.rb'
 require '../task-13.rb'
 require '../task-11.rb'
 require '../task-16.rb'
+require '../task-18.rb'
 
 describe "tasks_spec.rb" do
   let (:sequence) {[1,2,3,-4,5,-2,0,-8,6,9]}
+  let (:sequence1) {[-4,-2,1,3,5,0,-6,-9,8,7]}
   let (:range) {(1.0 .. 10.0)}
 
   it "should find sum of all positive numbers and quantity of negative numbers in sequence given" do
@@ -31,5 +33,9 @@ describe "tasks_spec.rb" do
 
   it "should find 20-th fibonacci number" do
     method_16(20).should == 6765
+  end
+  
+  it "should find how many negative numbers in the begining of sequence given" do
+    method_18(sequence1).should == 2
   end
 end
