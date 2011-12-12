@@ -14,14 +14,36 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  if a == b && a == c
-     :equilateral
-  elsif a == b || a == c || b == c
-     :isosceles
-  else 
-     :scalene
+  t = Triangle.new(a, b, c)
+  return t.type
+end
+
+class Triangle
+  def initialize(a, b, c)
+    @sides = [a, b, c].sort
+    guard_against_invalid_lengths
+  end
+
+  def type
+    case @sides.uniq.size
+    when 1 then :equilateral
+    when 2 then :isosceles
+    else :scalene
+    end
+  end
+
+  private
+  def guard_against_invalid_lengths
+    if @sides.any? { |x| x <= 0 }
+      raise TriangleError, "Sides must be greater than 0"
+    end
+
+    if @sides[0] + @sides[1] <= @sides[2]
+      raise TriangleError, "Not valid triangle lengths"    
+    end
   end
 end
+
 
 # Error class used in part 2.  No need to change this code.
 class TriangleError < StandardError
