@@ -7,49 +7,34 @@
 # д) последнюю компоненту файла.
 
 def sum_of_file(file_name)
-  array = Array.new  
-  file  = open(file_name){|file| file.read} 
-  for item in file  
-    array << item.to_i
-  end
-  array.inject(0) {|sum, item| sum += item}
+  array = IO.readlines(file_name) 
+  array.inject(0) {|sum, item| sum += item.to_i}
 end
 
 def product_of_file(file_name)
-  array = Array.new  
-  file  = open(file_name){|file| file.read} 
-  for item in file  
-    array << item.to_i
-  end
-  array.inject(1) {|sum, item| sum *= item}
+  array = IO.readlines(file_name) 
+  array.inject(1) {|sum, item| sum *= item.to_i}
 end 
 
 def sum_squares(file_name)
-  array = Array.new  
-  file  = open(file_name){|file| file.read} 
-  for item in file  
-    array << item.to_i
+  array = IO.readlines(file_name) 
+  array.inject(0) do |sum, item|
+    item = item.to_i  
+    sum += item*item
   end
-  array.inject(0) {|sum, item| sum += item*item}
 end 
   
 def modulus_and_square(file_name)
-  array = Array.new
-  file  = open(file_name){|file| file.read}
-  for item in file
-    sum = 0
-    array[0] = (sum += item.to_i).abs 
-    array[1] = (sum += item.to_i*item.to_i)*2
+  array = IO.readlines(file_name)
+  sum_mod  = (array.inject(0) {|sum, item| sum += item.to_i}).abs  
+  prod_sqr = array.inject(1) do |sum,item|
+    item = item.to_i
+    sum  *= item*item
   end
-  array
+  [sum_mod, prod_sqr]
 end
 
 def find_last(file_name)
-  array = Array.new
-  file = open(file_name){|file| file.read}
-  for item in file
-    array << item.to_i
-  end
-  array.last
+  array = IO.readlines(file_name)  
+  array.last.to_i
 end
-

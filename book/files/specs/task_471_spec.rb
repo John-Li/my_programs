@@ -15,7 +15,7 @@ describe "task_471" do
   end
 
   it "should find modulus of sum and square of product of file elements" do
-    modulus_and_square('../file.txt').should == [6, 12]
+    modulus_and_square('../file.txt').should == [6, 36]
   end    
   
   it "should find last component in file" do
