@@ -9,15 +9,13 @@
 
 def biggest(file_name)
   array = Array.new
-  file  = open(file_name){|file| file.read}
-  file.each {|item| array << item.to_i}
+  IO.foreach(file_name) {|item| array << item.to_i}
   array.max
 end
 
 def smallest_even(file_name)
   array = Array.new
-  file  = open(file_name){|file| file.read}
-  for item in file
+  IO.foreach(file_name) do |item| 
     item = item.to_i
     array << item if item.even?
   end
@@ -26,8 +24,7 @@ end
 
 def biggest_odd_modulus(file_name)
   array = Array.new
-  file  = open(file_name){|file| file.read}
-  for item in file
+  IO.foreach(file_name) do |item|
     item = item.to_i
     array << item.abs if item.odd?
   end
@@ -36,14 +33,12 @@ end
 
 def sum(file_name)
   array = Array.new
-  file  = open(file_name){|file| file.read}
-  file.each {|item| array << item.to_i}
+  IO.foreach(file_name) {|item| array << item.to_i}
   array.max + array.min
 end
 
 def difference(file_name)
   array = Array.new
-  file  = open(file_name){|file| file.read}
-  file.each {|item| array << item.to_i}
+  IO.foreach(file_name) {|item| array << item.to_i}
   array[0] - array[-1]
 end
