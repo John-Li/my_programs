@@ -5,18 +5,14 @@
 # в) количество квадратов нечетных чисел среди компонент. 
 
 def quantity_even(file_name)
-  file = open(file_name){|file| file.read}
-  count_even = 0
-  for item in file 
-    count_even +1 if item.to_i.even?
-  end
+  count_even = 0  
+  IO.foreach(file_name) {|item| count_even +1 if item.to_i.even?}
   count_even
 end 
 
 def odd_doubled(file_name)
   array = Array.new
-  file  = open(file_name){|file| file.read}
-  file.each {|item| array << item.to_i }
+  IO.foreach(file_name) {|item| array << item.to_i }
   count_doubles = 0
   array.each do |item|
     if item.odd?    
@@ -28,8 +24,7 @@ end
 
 def odd_squares(file_name)
   array = Array.new
-  file  = open(file_name){|file| file.read}
-  file.each {|item| array << item.to_i }
+  IO.foreach(file_name) {|item| array << item.to_i }
   count_squares = 0
   for item in array
     if item.odd?
