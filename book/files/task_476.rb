@@ -3,8 +3,8 @@
 # символьным файлом.
 
 def copy_in(file_name)
-  str = IO.read(file_name)
-  File.open(file_name, "a+") {|file| puts str} 
+  string = IO.read(file_name) 
+  File.open(file_name, 'a') {|file| file.puts string} 
 end
 
 
