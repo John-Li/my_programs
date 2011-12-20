@@ -1,0 +1,5 @@
+Next numbers are even:
+467356
+Next numbers are divisible 3 and non divisible 7:
+Next numbers are perfect squares:
+467356
