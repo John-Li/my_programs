@@ -2,9 +2,9 @@
 # *) Файл, компоненты которого являются символами, называется
 # символьным файлом.
 
-def copy_in(file_name)
-  string = IO.read(file_name) 
-  File.open(file_name, 'a') {|file| file.puts string} 
+def copy_to(input_file, output_file)
+  string = IO.read(input_file) 
+  File.open(output_file, 'w') {|file| file.puts string} 
 end
 
-
+copy_to('symbols.txt','symbol_new.txt')
