@@ -1,0 +1,1 @@
+This shoud be some strange reversed text in file_g.
