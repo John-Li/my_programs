@@ -11,17 +11,10 @@
 # число компонент файла f делится на 40).
 
 def method_489(file_name)
-  file_f = IO.readlines(file_name)
-  positive = Array.new
-  negative = Array.new
-  file_f.flatten!
+  file_f = IO.readlines(file_name).flatten!
+  numbers = []
   for line in file_f do
-    while line.match(/-\d+/) do
-      negative << line.slice!(/-\d+/)
-    end
-    while line.match(/\d+/) do
-      positive << line.slice!(/\d+/)
-    end
+    numbers << line.scan(/-?\d+/) 
   end
   File.open("/home/john/my_programs/book/files/task_files/489/file_g.txt","w") do |file|
     count = 0
@@ -45,4 +38,3 @@ def method_489(file_name)
 end
 
 method_489("/home/john/my_programs/book/files/task_files/489/file_f.txt")
-
