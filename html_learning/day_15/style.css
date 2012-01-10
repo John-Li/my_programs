@@ -1,0 +1,75 @@
+body {
+  background: #e3e3e3;
+  font-family: sans-serif;
+}
+
+.wrap h1 {
+  background: url(../img/fuck_you.jpg) no-repeat;
+  text-indent: -9999px;
+  width: 230;
+  height: 230;
+}
+
+.wrap {
+  min-width: 600px;
+  width: 80%;
+  margin: auto;
+}
+
+.navigation ul {
+  padding-left: 0;
+}
+
+.navigation li {
+  display: inline;
+  padding-right: 10px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #666;
+}
+
+.navigation ul a:hover {
+  text-decoration: underline;
+}
+
+.content, aside {
+  height: 600px;
+}
+
+.content {
+  float: left;
+  width: 85%;
+}
+
+aside {
+  float: left;
+  width: 15%;
+}
+
+aside ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+form li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+form ul {
+  padding-left: 0;
+}
+
+label {
+  display: block;
+  padding-bottom: 8px;
+  cursor: pointer;
+  color: #292929;
+}
+
+textarea {
+  width: 400px;
+  height: 200px;
+}
